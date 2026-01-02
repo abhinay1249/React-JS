@@ -1,0 +1,20 @@
+ReactJS ----------------------> An external library that helps us create websites easier.
+
+    ** React library is used for both website and mobile apps.
+    ** React DOM library is used only for websites particularly.
+    ** In order to create websites both react and reactDOM are used majorly.
+    ** ReactDOM.createRoot() is used to set up React.
+        eg:- ReactDOM.createRoot(<html element>)
+    ** .render() is used to display something in react.
+    ** BABEL = is a javascript complier.
+        --> used to translate other languages into javascript.
+    ** When using react, we use enhnaced version of JS i.e JSX
+    ** JSX = JavaScript XML
+        --> Same as javascript, but we can write html in our js code.
+    ** WebBrowser doesnt understand JSX, so we need to translate jsx into js.
+        --> In order to perform that translation we use babel. 
+
+Components ------------------------> A piece of a website
+
+    ** In react, the component name has to be start with Capital.
+    
