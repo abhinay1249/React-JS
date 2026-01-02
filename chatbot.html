@@ -14,16 +14,16 @@
 
         function ChatInput(){
             return (
-                <div>
-                    <input />
+                <>
+                    <input placeholder="Send a message to Chatbot" size="30"/>
                     <button>Send</button>
-                </div>
+                </>
             );
         }
         const div = (
-            <div>
-                {ChatInput()}
-            </div>
+            <> 
+                <ChatInput/>
+            </>
         );
       const container = document.querySelector('.js-container');
       ReactDOM.createRoot(container).render(div);

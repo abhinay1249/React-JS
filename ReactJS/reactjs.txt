@@ -19,4 +19,8 @@ Components ------------------------> A piece of a website
     ** In react, the component name has to be start with Capital.
     ** In react if there is a function and it can be called by defining it
         through a tag of the function name(just like creating the respective xml tags).
-        
+    ** Main Idea of React is to create self elements.
+    ** Fragment is used to remove the element but maintain the code syntax by using
+        <>
+            <input/>
+        <>
