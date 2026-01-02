@@ -17,4 +17,6 @@ ReactJS ----------------------> An external library that helps us create website
 Components ------------------------> A piece of a website
 
     ** In react, the component name has to be start with Capital.
-    
+    ** In react if there is a function and it can be called by defining it
+        through a tag of the function name(just like creating the respective xml tags).
+        
