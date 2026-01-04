@@ -14,25 +14,24 @@
     <script src="https://unpkg.com/supersimpledev/babel.js"></script>
     <script type="text/babel">
 
-        function ProductDetails({item, price, discountPrice}){
+        function ProductDetails({item, price, discountPrice,imageSrc}){
             return(
-                <>
+                <div>
+                    <img src={imageSrc} width="150"/>
                     <p>{item}</p>
-                    
-                    {!discountPrice && (
-                        <p> Price: ${price}</p>
-                    )}
-                    
-                    {discountPrice && (
-                        <>
-                            <del>
-                                <p>Price: ${price}</p>
-                            </del>
-                            <p>Discount Price: ${discountPrice}</p>
-                        </>
-                    )}
+                    {!discountPrice ? (
+                            <p> Price: ${price}</p> 
+                        ):(                         
+                            <>
+                                <del>
+                                    <p>Price: ${price}</p>
+                                </del>
+                                <p>Discount Price: ${discountPrice}</p>
+                            </>
+                        )
+                    }
                     <button>Add To Cart</button>
-                </>
+                </div>
             );
         }
 
@@ -43,14 +42,23 @@
                         item="Cotton Socks" 
                         price="10.90"
                         discountPrice="5.45"
+                        imageSrc="Images/cotton-socks.png"
                     />
                     <ProductDetails 
                         item="Tennis Ball" 
                         price="6.00"
+                        imageSrc="Images/tennis-balls.png"
                     />
                     <ProductDetails 
                         item="UnderArmour T-Shirt" 
                         price="19.99"
+                        imageSrc="Images/ua-tshirt.png"
+                    />
+                    <ProductDetails 
+                        item="Nike Air Max Shoes" 
+                        price="199.99"
+                        discountPrice="149.99"
+                        imageSrc="Images/nike.png"
                     />
                 </>
             );
