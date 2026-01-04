@@ -55,5 +55,6 @@ Components ------------------------> A piece of a website
     ** STATE is even used to save data that changes over time.
     ** If we need to have to an access for the state of one component in another state then we need to perform.
         lifting the state up --> this can be done by moving the required state to the parent component 
-            such as for eg:- to the APP component.
+            such as for eg:- to the APP component and then the state can be shared using props.
+    **
     

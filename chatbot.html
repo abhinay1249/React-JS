@@ -16,7 +16,8 @@
 
     // ======================= Chat Input Component ==========================
 
-    function ChatInput() {
+    function ChatInput({chatMessages,setChatMessages}) {
+      
       const [inputText, setInputText] = React.useState('');
 
       function saveInputText(event){
@@ -85,7 +86,26 @@
 
     // ====================== Chat Messages Component =============================
 
-    function ChatMessages() {
+    function ChatMessages({chatMessages,setChatMessages}) {
+
+      return (
+        <>
+          {chatMessages.map((chatMessage) => {
+          return (
+            <ChatUser
+              message = {chatMessage.message}
+              sender = {chatMessage.sender}
+              key = {chatMessage.id}
+            />
+          );
+          })}
+        </>
+      );
+    }
+
+    // =========================== App Component ===============================
+
+    function App() {
 
       const [chatMessages,setChatMessages] = React.useState([{
           message: "Hello Chatbot",
@@ -107,30 +127,17 @@
       // const [chatMessages,setChatMessages] = array;
       // const chatMessages = array[0];
       // const setChatMessages=array[1];
-      
 
       return (
         <>
-          {chatMessages.map((chatMessage) => {
-          return (
-            <ChatUser
-              message = {chatMessage.message}
-              sender = {chatMessage.sender}
-              key = {chatMessage.id}
-            />
-          );
-          })}
-        </>
-      );
-    }
-
-    // =========================== App Component ===============================
-
-    function App() {
-      return (
-        <>
-          <ChatInput />
-          <ChatMessages/>
+          <ChatInput
+            chatMessages={chatMessages}
+            setChatMessages={setChatMessages} 
+          />
+          <ChatMessages
+            chatMessages={chatMessages}
+            setChatMessages={setChatMessages}
+          />
         </>
       );
     }
