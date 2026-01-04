@@ -25,4 +25,7 @@ Components ------------------------> A piece of a website
             <input/>
         <>
     ** In react div are used for the layout purpose.
-    
+    ** Every component function does contains props,
+        props --> parameter in the function that captures the attribute of the html and 
+            works as a parameter in the function.
+            shortcut for properties is props.
