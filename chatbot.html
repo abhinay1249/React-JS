@@ -17,16 +17,16 @@
     function ChatInput() {
       return (
         <>
-          <input 
-            placeholder="Send a message to Chatbot" 
-            size="30" 
+          <input
+            placeholder="Send a message to Chatbot"
+            size="30"
           />
           <button>Send</button>
         </>
       );
     }
 
-    function ChatMessage({ message, sender }) {
+    function ChatMessage({ message, sender}) {
 
       // const message = props.message;
       // const sender = props.sender;
@@ -45,13 +45,13 @@
 
       return (
         <div>
-          {sender === 'robot' && (
+          {sender === 'Robot' && (
             <img src="Images/robot.png" width="50" />
           )}
 
           {message}
 
-          {sender === 'user' && (
+          {sender === 'User' && (
             <img src="Images/user.png" width="50" />
           )}
 
@@ -59,33 +59,51 @@
       );
     }
 
-    function App(){
-      return(
+    function ChatMessageComponents() {
+
+      const ChatMessages = [{
+        message: "Hello Chatbot",
+        sender: "User",
+        id:'id1'
+      }, {
+        message: "Hello User, How Can I Help you?",
+        sender: "Robot",
+        id:'id2'
+      }, {
+        message: "Flip a Coin",
+        sender: "User",
+        id:'id3'
+      }, {
+        message: "Sure, You got Tails!",
+        sender: "Robot",
+        id:'id4'
+      }];
+
+      return (
+        ChatMessages.map((chatMessage) => {
+          return (
+            <ChatMessage
+              message = {chatMessage.message}
+              sender = {chatMessage.sender}
+              key = {chatMessage.id}
+            />
+          );
+        })
+      );
+    }
+
+    function App() {
+      return (
         <>
           <ChatInput />
-          <ChatMessage 
-            message="Hello Chatbot" 
-            sender="user" 
-          />
-          <ChatMessage 
-            message="Hello User, How Can I Help you?" 
-            sender="robot" 
-          />
-          <ChatMessage 
-            message="Flip a Coin" 
-            sender="user"
-          />
-          <ChatMessage 
-            message="Sure, You got tails" 
-            sender="robot" 
-          />
+          <ChatMessageComponents/>
         </>
       );
     }
 
     const container = document.querySelector('.js-container');
-    ReactDOM.createRoot(container).render(<App/>);
-    
+    ReactDOM.createRoot(container).render(<App />);
+
   </script>
 </body>
 
