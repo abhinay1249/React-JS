@@ -46,3 +46,10 @@ Components ------------------------> A piece of a website
             --> it returns the updater function.
     ** In Js, an array can be copied into another one by using Spread Operator such as,
         ...<array_name> performs the copy operation.  
+    ** Never use DOM while performing react, it occurs a conflict while performing rather than it   
+        use react features.
+    ** Previously, we had worked around onClick where it runs the function when clicked.
+        Now, onChange ---> runs a function when we change the text inside an input.
+        While performing onChange, an object is taken as event and by using it,
+            event.target.value --> is used to give us the element that we are typing in.
+
