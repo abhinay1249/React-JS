@@ -24,3 +24,5 @@ Components ------------------------> A piece of a website
         <>
             <input/>
         <>
+    ** In react div are used for the layout purpose.
+    
