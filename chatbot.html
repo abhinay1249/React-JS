@@ -22,11 +22,12 @@
       }
       
       function ChatMessage({message, sender}){
+
         // const message = props.message;
         // const sender = props.sender;
-    
-        const {message,sender} = props;
+        // const {message,sender} = props;
         
+        /*
         if(sender === "robot"){
           return(
             <div>
@@ -35,10 +36,14 @@
             </div>
           )
         }
+        */
+
         return(
           <div>
+            {sender === 'robot' && <img src="Images/robot.png" width="50"/>}
             {message}
-            <img src="Images/user.png" width="50"/>
+            {sender === 'user' && <img src="Images/user.png" width="50"/>}
+            
           </div>
         )
       }

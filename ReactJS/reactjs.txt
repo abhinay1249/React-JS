@@ -29,3 +29,6 @@ Components ------------------------> A piece of a website
         props --> parameter in the function that captures the attribute of the html and 
             works as a parameter in the function.
             shortcut for properties is props.
+    ** A way to destructure the if statement in js, instead if and condition
+        we can use {<condition> && <inside condition statements>}
+            eg:- {message==='robot' &&  break;}
