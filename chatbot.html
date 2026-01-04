@@ -14,6 +14,8 @@
   <script src="https://unpkg.com/supersimpledev/babel.js"></script>
   <script type="text/babel">
 
+    // ======================= Chat Input Component ==========================
+
     function ChatInput() {
       return (
         <>
@@ -26,7 +28,9 @@
       );
     }
 
-    function ChatMessage({ message, sender}) {
+    // ========================== Chat User Component ==========================
+
+    function ChatUser({ message, sender}) {
 
       // const message = props.message;
       // const sender = props.sender;
@@ -59,9 +63,11 @@
       );
     }
 
+    // ====================== Chat Messages Component =============================
+
     function ChatMessageComponents() {
 
-      const ChatMessages = [{
+      const chatMessages = [{
         message: "Hello Chatbot",
         sender: "User",
         id:'id1'
@@ -79,18 +85,33 @@
         id:'id4'
       }];
 
+      function sendMessage(){
+        chatMessages.push({
+          message:'test',
+          sender:'User',
+          key:crypto.randomUUID()
+        });
+        console.log(chatMessages);
+      }
+
       return (
-        ChatMessages.map((chatMessage) => {
+        <>
+          <button onClick={sendMessage}>Send Message</button>
+
+          {chatMessages.map((chatMessage) => {
           return (
-            <ChatMessage
+            <ChatUser
               message = {chatMessage.message}
               sender = {chatMessage.sender}
               key = {chatMessage.id}
             />
           );
-        })
+          })}
+        </>
       );
     }
+
+    // =========================== App Component ===============================
 
     function App() {
       return (
@@ -106,5 +127,4 @@
 
   </script>
 </body>
-
 </html
