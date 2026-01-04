@@ -52,4 +52,8 @@ Components ------------------------> A piece of a website
         Now, onChange ---> runs a function when we change the text inside an input.
         While performing onChange, an object is taken as event and by using it,
             event.target.value --> is used to give us the element that we are typing in.
-
+    ** STATE is even used to save data that changes over time.
+    ** If we need to have to an access for the state of one component in another state then we need to perform.
+        lifting the state up --> this can be done by moving the required state to the parent component 
+            such as for eg:- to the APP component.
+    
