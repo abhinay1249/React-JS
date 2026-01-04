@@ -14,10 +14,9 @@
     <script src="https://unpkg.com/supersimpledev/babel.js"></script>
     <script type="text/babel">
 
-        function App(){
+        function LoginForm(){
             return(
                 <>
-                    <p>Hello, Welcome to my Website!</p>
                     <div>
                         <input 
                             placeholder="Email"
@@ -34,11 +33,20 @@
                 </>
             );
         }
-        
+
+        function App(){
+            return(
+                <>
+                    <p>Hello, Welcome to my Website!</p>
+                    <LoginForm/>
+                </>
+            );
+        }
 
         const container = document.querySelector('.js-container');
         const root = ReactDOM.createRoot(container);
         root.render(<App/>);
+
     </script>
   </body>
 </html>
