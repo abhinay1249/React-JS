@@ -67,31 +67,38 @@
 
     function ChatMessageComponents() {
 
-      const chatMessages = [{
-        message: "Hello Chatbot",
-        sender: "User",
-        id:'id1'
-      }, {
-        message: "Hello User, How Can I Help you?",
-        sender: "Robot",
-        id:'id2'
-      }, {
-        message: "Flip a Coin",
-        sender: "User",
-        id:'id3'
-      }, {
-        message: "Sure, You got Tails!",
-        sender: "Robot",
-        id:'id4'
-      }];
+      const [chatMessages,setChatMessages] = React.useState([{
+          message: "Hello Chatbot",
+          sender: "User",
+          id:'id1'
+        },{
+          message: "Hello User, How Can I Help you?",
+          sender: "Robot",
+          id:'id2'
+        }, {
+          message: "Flip a Coin",
+          sender: "User",
+          id:'id3'
+        }, {
+          message: "Sure, You got Tails!",
+          sender: "Robot",
+          id:'id4'
+        }]);
+      // const [chatMessages,setChatMessages] = array;
+      // const chatMessages = array[0];
+      // const setChatMessages=array[1];
+      
 
       function sendMessage(){
-        chatMessages.push({
+
+        setChatMessages([
+          ...chatMessages,
+          {
           message:'test',
           sender:'User',
           key:crypto.randomUUID()
-        });
-        console.log(chatMessages);
+          }
+        ]);
       }
 
       return (

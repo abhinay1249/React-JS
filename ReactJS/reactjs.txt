@@ -38,3 +38,11 @@ Components ------------------------> A piece of a website
         run the event handler function rather just the event handler.
     ** In order to Get a random id on javascript use,
         ======>> crypto.randomUUID();
+    ** STATE ------------> data that is connected to the HTML.
+        when we update the data it will update in Html.
+    ** In order to use a state in react js then we should use
+        React.useState() this returns an array which contains two values:-
+            --> it returns the current data
+            --> it returns the updater function.
+    ** In Js, an array can be copied into another one by using Spread Operator such as,
+        ...<array_name> performs the copy operation.  
