@@ -57,5 +57,5 @@ Components ------------------------> A piece of a website
         lifting the state up --> this can be done by moving the required state to the parent component 
             such as for eg:- to the APP component and then the state can be shared using props.
     ** In react, state does not update immeditely, instead it updates after all the code is finished.
-    
+    ** Update the state == Update the website.
     
