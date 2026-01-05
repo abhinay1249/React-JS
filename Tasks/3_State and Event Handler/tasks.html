@@ -15,10 +15,19 @@
   <script src="https://unpkg.com/supersimpledev/babel.js"></script>
   <script type="text/babel">
 
+    function click(){
+        console.log("Clicked");
+    }
 
+    function Count(){
+
+        return(
+        <button onClick={click}>Clicked 0 times</button>
+        );
+    }
 
     const container = document.querySelector('.js-container');
-    ReactDOM.createRoot(container).render(<App />);
+    ReactDOM.createRoot(container).render(<Count />);
 
   </script>
 </body>
