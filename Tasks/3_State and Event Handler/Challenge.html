@@ -55,6 +55,8 @@
       function handleKeyDown(event){
         if(event.key==='Enter'){
             sendMessage();
+        }else if(event.key === 'Escape'){
+            setInputText('');
         }
       }
 
