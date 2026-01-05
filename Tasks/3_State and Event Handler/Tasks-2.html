@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Task - 3</title>
+  <title>Task - 2</title>
 </head>
 
 <body>
@@ -16,20 +16,33 @@
   <script type="text/babel">
 
 
-    function Name(){
+    function App(){
+        const [name,setName] = React.useState('');
+
+        function inputText(event){
+            setName(event.target.value);
+        }
+
+        function reset(){
+            setName('');
+        }
+
+        function example(){
+            setName('Alice');
+        }
+
         return(
             <>
                 <input 
                     placeholder="Type a name here"
+                    onChange={inputText}
+                    value={name}
                 />
-                <p>Hello </p>
+                <button onClick={reset}>Reset</button>
+                <button onClick={example}>Example</button>
+                <p>Hello {name}</p>
+                
             </>
-        );
-    }
-
-    function App(){
-        return(
-            <Name/>
         );  
     }
 
