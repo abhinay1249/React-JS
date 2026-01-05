@@ -17,24 +17,40 @@
 
 
 
-    function App(){
-        const [count, setCount] = React.useState(0);
+    function Counter({count,setCount}){
 
         function click(){
             setCount(count+1);
-
-
         }
-        
+
         return(
-            count===1 ?         
-                <button 
-                    onClick={click}>Clicked {count} time
-                </button>:        
-                <button 
-                    onClick={click}>Clicked {count} times
-                </button>
+   
+            <button 
+                onClick={click}>Clicked {count} {count===1 ? 'time' : 'times'}
+            </button>
             
+        );
+    }
+
+    function App(){
+
+        const [count, setCount] = React.useState(0);
+
+        function reset(){
+            setCount(0);
+        }
+        return(
+            <>
+                <Counter
+                    count = {count}
+                    setCount = {setCount}
+                />
+                <Counter
+                    count = {count}
+                    setCount = {setCount}
+                />
+                <button onClick ={reset}>Reset</button>
+            </>
         );
     }
 
