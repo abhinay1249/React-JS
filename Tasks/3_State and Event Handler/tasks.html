@@ -22,10 +22,19 @@
 
         function click(){
             setCount(count+1);
+
+
         }
         
         return(
-        <button onClick={click}>Clicked {count} times</button>
+            count===1 ?         
+                <button 
+                    onClick={click}>Clicked {count} time
+                </button>:        
+                <button 
+                    onClick={click}>Clicked {count} times
+                </button>
+            
         );
     }
 
