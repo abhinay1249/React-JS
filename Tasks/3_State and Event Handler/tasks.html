@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Chatbot</title>
+  <title>Task - 3</title>
 </head>
 
 <body>
@@ -15,19 +15,22 @@
   <script src="https://unpkg.com/supersimpledev/babel.js"></script>
   <script type="text/babel">
 
-    function click(){
-        console.log("Clicked");
-    }
 
-    function Count(){
 
+    function App(){
+        const [count, setCount] = React.useState(0);
+
+        function click(){
+            setCount(count+1);
+        }
+        
         return(
-        <button onClick={click}>Clicked 0 times</button>
+        <button onClick={click}>Clicked {count} times</button>
         );
     }
 
     const container = document.querySelector('.js-container');
-    ReactDOM.createRoot(container).render(<Count />);
+    ReactDOM.createRoot(container).render(<App />);
 
   </script>
 </body>
