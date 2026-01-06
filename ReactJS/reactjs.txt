@@ -38,8 +38,10 @@ Components ------------------------> A piece of a website
         run the event handler function rather just the event handler.
     ** In order to Get a random id on javascript use,
         ======>> crypto.randomUUID();
-    ** STATE ------------> data that is connected to the HTML.
-        when we update the data it will update in Html.
+
+STATE ------------> data that is connected to the HTML.
+
+    ** when we update the data it will update in Html.
     ** In order to use a state in react js then we should use
         React.useState() this returns an array which contains two values:-
             --> it returns the current data
@@ -58,4 +60,7 @@ Components ------------------------> A piece of a website
             such as for eg:- to the APP component and then the state can be shared using props.
     ** In react, state does not update immeditely, instead it updates after all the code is finished.
     ** Update the state == Update the website.
-    
+
+CSS WITH REACT -----> styling the page with react
+
+    ** here the class attribute name is className for styling elements.
