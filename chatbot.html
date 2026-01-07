@@ -3,6 +3,14 @@
 
 <head>
   <title>Chatbot</title>
+  <style>
+    .send-button{
+      background-color: green;
+      color:white;
+      border:none;
+      padding: 4px
+    }
+  </style>
 </head>
 
 <body>
@@ -86,7 +94,7 @@
             onKeyDown={handleKeyDown}
             value={inputText} // Controlled Input
           />
-          <button 
+          <button className="send-button"
             onClick={sendMessage}
           >Send</button>
         </>
