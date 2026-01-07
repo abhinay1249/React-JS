@@ -67,4 +67,5 @@ CSS WITH REACT -----> styling the page with react
     ** overflow:scroll is used for the scroll of the container
     **scrollbar-width is used to hide the scroll bar on the screen.
     ** Hooks --> insert react features into our component.
-    
+        useEffect --> is used to run some code after component is created or updated.
+        
