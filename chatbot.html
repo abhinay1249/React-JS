@@ -14,6 +14,23 @@
       font-size: 15px;
       cursor: pointer;
     }
+
+    .input-area{
+      padding:12px 15px;
+      border-radius: 10px;
+      border-width: 1px;
+      font-size:15px;
+      flex-grow: 1;
+    }
+
+    .input-area-container{
+      display:flex;
+    }
+
+    .app-container{
+      max-width: 600px;
+    }
+
   </style>
 </head>
 
@@ -90,18 +107,20 @@
       }
 
       return (
-        <>
-          <input
+        <div className="input-area-container">
+          <input 
+            className="input-area"
             placeholder="Send a message to Chatbot"
             size="30"
             onChange={saveInputText}
             onKeyDown={handleKeyDown}
             value={inputText} // Controlled Input
           />
-          <button className="send-button"
+          <button 
+            className="send-button"
             onClick={sendMessage}
           >Send</button>
-        </>
+        </div>
       );
     }
 
@@ -185,7 +204,7 @@
       // const setChatMessages=array[1];
 
       return (
-        <>
+        <div className="app-container">
           <ChatInput
             chatMessages={chatMessages}
             setChatMessages={setChatMessages} 
@@ -193,7 +212,7 @@
           <ChatMessages
             chatMessages={chatMessages}
           />
-        </>
+        </div>
       );
     }
 
