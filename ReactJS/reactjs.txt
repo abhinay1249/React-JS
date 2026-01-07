@@ -68,4 +68,5 @@ CSS WITH REACT -----> styling the page with react
     **scrollbar-width is used to hide the scroll bar on the screen.
     ** Hooks --> insert react features into our component.
         useEffect --> is used to run some code after component is created or updated.
-        
+        useRef --> is used to automatically save an HTML element in this ref.
+    ** Any variable with Elem states that particular variable has html code in it.
