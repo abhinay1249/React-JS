@@ -12,6 +12,7 @@
         margin-bottom:10px;
         border-radius: 5px;
         border-width: 1px;
+        margin-right: 8px;
     }
     .authentication-button{
         padding:10px 15px;
@@ -37,6 +38,15 @@
   <script type="text/babel">
 
     function App(){
+        const [showPassword, setPassword] = React.useState(true);
+        
+        function showContent(){
+            if(showPassword){
+                setPassword(false);
+            }else{
+                setPassword(true);
+            }
+        }
         return(
             <>
                 <p> Hello, Welcome to my website</p>
@@ -49,9 +59,12 @@
                 <div >
                     <input
                         placeholder="Password"    
-                        type="Password"   
+                        type={showPassword?'Text':"Password"}  
                         className="input" 
                     />
+                    <button
+                        onClick={showContent}
+                    >{showPassword?'Hide':"Show"}</button>
                 </div>
                 <>
                     <button 
