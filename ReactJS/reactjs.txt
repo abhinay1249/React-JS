@@ -70,3 +70,4 @@ CSS WITH REACT -----> styling the page with react
         useEffect --> is used to run some code after component is created or updated.
         useRef --> is used to automatically save an HTML element in this ref.
     ** Any variable with Elem states that particular variable has html code in it.
+    ** hook functions must start with 'use'
