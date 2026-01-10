@@ -4,7 +4,26 @@
 <head>
   <title>Challenge-2</title>
   <style>
-    
+    body{
+        font-family: Arial;
+        background-color: rgb(222,222,222);
+        margin-top:0px;
+        margin-bottom:0px;
+    }
+    button{
+        background-color: rgb(25,135,84);
+        border:none;
+        margin-right:10px;
+        padding:10px 12px;
+        color:white;
+    }
+    .buttons{
+        display: flex;
+        justify-content: center;
+        height:100vh;
+        align-items: center;
+
+    }
   </style>
 </head>
 
@@ -38,7 +57,7 @@
         }
 
         return(
-            <>
+            <div className="buttons">
                 <button
                     onClick={manualCount}
                     ref={buttonRef}
@@ -49,7 +68,7 @@
                 <button
                     onClick={autoCount}
                 >Auto Click</button>
-            </>
+            </div>
             
         )
         
