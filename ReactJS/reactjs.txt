@@ -56,9 +56,9 @@ STATE ------------> data that is connected to the HTML.
             event.target.value --> is used to give us the element that we are typing in.
     ** STATE is even used to save data that changes over time.
     ** If we need to have to an access for the state of one component in another state then we need to perform.
-        lifting the state up --> this can be done by moving the required state to the parent component 
+        lifting the state up --> this can be done by moving the required state to the parent component. 
             such as for eg:- to the APP component and then the state can be shared using props.
-    ** In react, state does not update immeditely, instead it updates after all the code is finished.
+    ** In react, state does not update immediately, instead it updates after all the code is finished.
     ** Update the state == Update the website.
 
 CSS WITH REACT -----> styling the page with react
@@ -70,4 +70,4 @@ CSS WITH REACT -----> styling the page with react
         useEffect --> is used to run some code after component is created or updated.
         useRef --> is used to automatically save an HTML element in this ref.
     ** Any variable with Elem states that particular variable has html code in it.
-    ** hook functions must start with 'use'
+    ** Hook functions must start with 'use'
