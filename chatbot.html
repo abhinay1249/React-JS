@@ -4,75 +4,81 @@
 <head>
   <title>Chatbot</title>
   <style>
-    body{
+    body {
       font-family: Arial;
-      margin-top:0px;
-      margin-bottom:0px;
+      margin-top: 0px;
+      margin-bottom: 0px;
     }
-    .send-button{
+
+    .send-button {
       background-color: rgb(25, 135, 84);
-      color:white;
-      border:none;
+      color: white;
+      border: none;
       padding: 12px 20px;
-      margin-left:10px;
+      margin-left: 10px;
       border-radius: 10px;
       font-size: 15px;
       cursor: pointer;
     }
 
-    .input-area{
-      padding:12px 15px;
+    .input-area {
+      padding: 12px 15px;
       border-radius: 10px;
       border-width: 1px;
-      font-size:15px;
+      font-size: 15px;
       flex-grow: 1;
     }
 
-    .input-area-container{
-      display:flex;
+    .input-area-container {
+      display: flex;
       margin-bottom: 60px;
     }
 
-    .app-container{
+    .app-container {
       max-width: 600px;
-      margin-left:auto;
-      margin-right:auto;
-      height: 100vh; /*--  vh refers to viewheight of the browser --*/
+      margin-left: auto;
+      margin-right: auto;
+      height: 100vh;
+      /*--  vh refers to viewheight of the browser --*/
       display: flex;
       flex-direction: column;
     }
 
-    .chat-message-user{
+    .chat-message-user {
       display: flex;
       justify-content: end;
       align-items: start;
-    } 
+    }
 
-    .chat-message-robot{
+    .chat-message-robot {
       display: flex;
       align-items: start;
     }
 
-    .chat-message-text{
-      background-color: rgb(238,238,238);
+    .chat-message-text {
+      background-color: rgb(238, 238, 238);
       padding: 15px 20px;
       border-radius: 10px;
-      margin-left:20px;
-      margin-right:20px;
-      margin-right:10px;
+      margin-left: 20px;
+      margin-right: 20px;
+      margin-right: 10px;
       max-width: 300px;
     }
 
-    .chat-message-profile{
-      width:45px;
+    .chat-message-profile {
+      width: 45px;
     }
 
-    .chat-messages-container{
+    .chat-messages-container {
       flex-grow: 1;
       margin-top: 20px;
-      overflow:scroll;
+      overflow: scroll;
       scrollbar-width: none;
-      
+
+    }
+    .welcome-message{
+      color:rgb(120, 120, 120);
+      text-align: center;
     }
   </style>
 </head>
@@ -90,19 +96,19 @@
 
     // ======================= Chat Input Component ==========================
 
-    function ChatInput({chatMessages,setChatMessages}) {
+    function ChatInput({ chatMessages, setChatMessages }) {
 
       const [inputText, setInputText] = React.useState('');
       const [isLoading, setIsLoading] = React.useState(false);
 
-      function saveInputText(event){
+      function saveInputText(event) {
         setInputText(event.target.value);
       }
-  
 
-      async function sendMessage(){
 
-        if(isLoading || inputText===''){
+      async function sendMessage() {
+
+        if (isLoading || inputText === '') {
           return;
         }
 
@@ -111,9 +117,9 @@
         const newChatMessages = [
           ...chatMessages,
           {
-          message:inputText,
-          sender:'User',
-          id:crypto.randomUUID()
+            message: inputText,
+            sender: 'User',
+            id: crypto.randomUUID()
           }
         ];
         setInputText('');
@@ -121,37 +127,37 @@
         setChatMessages([
           ...newChatMessages,
           {
-            message:'Loading...',
-            sender:'Robot',
-            id:crypto.randomUUID()
+            message: 'Loading...',
+            sender: 'Robot',
+            id: crypto.randomUUID()
           }
         ]);
 
-        const response = await(Chatbot.getResponseAsync(inputText));
-         
+        const response = await (Chatbot.getResponseAsync(inputText));
+
         setChatMessages([
           ...newChatMessages,
           {
-          message:response,
-          sender:'Robot',
-          id:crypto.randomUUID()
+            message: response,
+            sender: 'Robot',
+            id: crypto.randomUUID()
           }
         ]);
 
         setIsLoading(false);
       }
-      
-      function handleKeyDown(event){
-        if(event.key === 'Enter'){
+
+      function handleKeyDown(event) {
+        if (event.key === 'Enter') {
           sendMessage();
-        }else if(event.key === 'Escape'){
+        } else if (event.key === 'Escape') {
           setInputText('');
         }
       }
 
       return (
         <div className="input-area-container">
-          <input 
+          <input
             className="input-area"
             placeholder="Send a message to Chatbot"
             size="30"
@@ -159,7 +165,7 @@
             onKeyDown={handleKeyDown}
             value={inputText} // Controlled Input
           />
-          <button 
+          <button
             className="send-button"
             onClick={sendMessage}
           >Send</button>
@@ -169,7 +175,7 @@
 
     // ========================== Chat User Component ==========================
 
-    function ChatUser({ message, sender}) {
+    function ChatUser({ message, sender }) {
 
       // const message = props.message;
       // const sender = props.sender;
@@ -188,14 +194,14 @@
 
       return (
         <div className={
-          sender==='User'
-          ?'chat-message-user'
-          :'chat-message-robot'
+          sender === 'User'
+            ? 'chat-message-user'
+            : 'chat-message-robot'
         }>
           {sender === 'Robot' && (
-            <img 
+            <img
               className="chat-message-profile"
-              src="Images/robot.png"  
+              src="Images/robot.png"
             />
           )}
           <div className="chat-message-text">
@@ -203,9 +209,9 @@
           </div>
 
           {sender === 'User' && (
-            <img 
+            <img
               className="chat-message-profile"
-              src="Images/user.png"  
+              src="Images/user.png"
             />
           )}
 
@@ -215,30 +221,30 @@
 
     // ====================== Chat Messages Component =============================
 
-    function ChatMessages({chatMessages,setChatMessages}) {
+    function ChatMessages({ chatMessages, setChatMessages }) {
       const chatMessagesRef = React.useRef(null);
 
-      React.useEffect(()=>{
+      React.useEffect(() => {
         const containerElem = chatMessagesRef.current
-        if(containerElem){
+        if (containerElem) {
           containerElem.scrollTop = containerElem.scrollHeight;
         }
-      },[chatMessages]);
+      }, [chatMessages]);
 
       return (
 
-        <div 
+        <div
           className="chat-messages-container"
           ref={chatMessagesRef}
         >
           {chatMessages.map((chatMessage) => {
-          return (
-            <ChatUser
-              message = {chatMessage.message}
-              sender = {chatMessage.sender}
-              key = {chatMessage.id}
-            />
-          );
+            return (
+              <ChatUser
+                message={chatMessage.message}
+                sender={chatMessage.sender}
+                key={chatMessage.id}
+              />
+            );
           })}
         </div>
       );
@@ -248,36 +254,23 @@
 
     function App() {
 
-      const [chatMessages,setChatMessages] = React.useState([{
-          message: "Hello Chatbot",
-          sender: "User",
-          id:'id1'
-        },{
-          message: "Hello User, How Can I Help you?",
-          sender: "Robot",
-          id:'id2'
-        }, {
-          message: "Flip a Coin",
-          sender: "User",
-          id:'id3'
-        }, {
-          message: "Sure, You got Tails!",
-          sender: "Robot",
-          id:'id4'
-        }]);
+      const [chatMessages, setChatMessages] = React.useState([]);
       // const [chatMessages,setChatMessages] = array;
       // const chatMessages = array[0];
       // const setChatMessages=array[1];
 
+
       return (
         <div className="app-container">
-
-          <ChatMessages
+          <div className="welcome-message">
+            {chatMessages.length === 0 && <p>Welcome to the Chatbot Project! Send a message using the text-box below</p>}
+          </div>
+            <ChatMessages
             chatMessages={chatMessages}
           />
           <ChatInput
             chatMessages={chatMessages}
-            setChatMessages={setChatMessages} 
+            setChatMessages={setChatMessages}
           />
         </div>
       );
@@ -288,4 +281,5 @@
 
   </script>
 </body>
+
 </html
