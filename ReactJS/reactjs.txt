@@ -82,5 +82,6 @@ REACT SETUP AND NODEJS -------------> Install Node Js
     ** create-vite command is used to set up a new React project.
     ** eslint is used to correct the javascript code.
     ** Vite is a tool that is used to set up this project.
-    
+    ** react/prop-types=off is used to turn off the props of in the code that stops eslint to check 
+            for errors.
 
