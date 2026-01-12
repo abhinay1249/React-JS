@@ -71,3 +71,9 @@ CSS WITH REACT -----> styling the page with react
         useRef --> is used to automatically save an HTML element in this ref.
     ** Any variable with Elem states that particular variable has html code in it.
     ** Hook functions must start with 'use'
+
+REACT SETUP AND NODEJS -------------> Install Node Js
+
+    ** A node let us run javascript code outside of a browser.
+    ** npm stands for Node Package Manager.
+    
