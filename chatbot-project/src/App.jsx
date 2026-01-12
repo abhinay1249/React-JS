@@ -111,6 +111,7 @@ function ChatUser({ message, sender }){
   // ====================== Chat Messages Component =============================
     
 function useAutoScroll(dependencies){
+
   const containerRef = React.useRef(null);
   React.useEffect(() => {
     const containerElem = containerRef.current
@@ -119,7 +120,10 @@ function useAutoScroll(dependencies){
     }
   },dependencies);
   return containerRef;
+  
 }
+
+
 function ChatMessages({ chatMessages }) {
   const chatMessagesRef = useAutoScroll([chatMessages]);
   return (
@@ -140,6 +144,7 @@ function ChatMessages({ chatMessages }) {
   );
 }
 
+// ====================== App Component =============================
 
 function App() {
   const [chatMessages, setChatMessages] = useState([]);

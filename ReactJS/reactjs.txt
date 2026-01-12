@@ -84,4 +84,5 @@ REACT SETUP AND NODEJS -------------> Install Node Js
     ** Vite is a tool that is used to set up this project.
     ** react/prop-types=off is used to turn off the props of in the code that stops eslint to check 
             for errors.
-
+    <StrictMode> give us some additional checks and warnings when developing an app.
+    
