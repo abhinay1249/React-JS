@@ -76,4 +76,11 @@ REACT SETUP AND NODEJS -------------> Install Node Js
 
     ** A node let us run javascript code outside of a browser.
     ** npm stands for Node Package Manager.
+    ** A package refers to the external library.
+    ** npm will let us install external libraries into our project.
+    ** npx is used to install and run the package in the command line.
+    ** create-vite command is used to set up a new React project.
+    ** eslint is used to correct the javascript code.
+    ** Vite is a tool that is used to set up this project.
     
+
