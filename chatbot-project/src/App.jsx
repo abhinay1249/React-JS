@@ -1,11 +1,13 @@
 import { useState } from 'react'
+import reactLogo from './assets/react.svg'
+import viteLogo from '/vite.svg'
 import './App.css'
 
-  // ======================= Chat Input Component ==========================
+
 
 function ChatInput({ chatMessages, setChatMessages }) {
-  const [inputText, setInputText] = useState('');
-  const [isLoading, setIsLoading] = useState(false);
+  const [inputText, setInputText] = React.useState('');
+  const [isLoading, setIsLoading] = React.useState(false);
   function saveInputText(event) {
     setInputText(event.target.value);
   }
@@ -69,7 +71,7 @@ function ChatInput({ chatMessages, setChatMessages }) {
 
 // ========================== Chat User Component ==========================
 
-function ChatUser({ message, sender }){
+function ChatUser({ message, sender }) {
   // const message = props.message;
   // const sender = props.sender;
   // const {message,sender} = props;
@@ -107,11 +109,9 @@ function ChatUser({ message, sender }){
     </div>
   );
 }
+// ====================== Chat Messages Component =============================
 
-  // ====================== Chat Messages Component =============================
-    
 function useAutoScroll(dependencies){
-
   const containerRef = React.useRef(null);
   React.useEffect(() => {
     const containerElem = containerRef.current
@@ -120,11 +120,8 @@ function useAutoScroll(dependencies){
     }
   },dependencies);
   return containerRef;
-  
 }
-
-
-function ChatMessages({ chatMessages }) {
+function ChatMessages({ chatMessages}) {
   const chatMessagesRef = useAutoScroll([chatMessages]);
   return (
     <div
@@ -144,9 +141,7 @@ function ChatMessages({ chatMessages }) {
   );
 }
 
-// ====================== App Component =============================
-
-function App() {
+function App(){
   const [chatMessages, setChatMessages] = useState([]);
   // const [chatMessages,setChatMessages] = array;
   // const chatMessages = array[0];
