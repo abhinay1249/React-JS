@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react'
 import { ChatUser } from './ChatUser';
-
+import './ChatMessages.css'
 
 function useAutoScroll(dependencies){
 
