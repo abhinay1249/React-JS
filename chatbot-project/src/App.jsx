@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react'
+import { Chatbot } from 'supersimpledev'
 import './App.css'
 import RobotProfileImage from './assets/robot.png';
 import UserProfileImage from './assets/user.png';
@@ -32,7 +33,7 @@ function ChatInput({ chatMessages, setChatMessages }) {
     setChatMessages([
       ...newChatMessages,
       {
-        message: <img src="Images/loading-spinner.gif" className="loading-spinner"/>,
+        message: <img src={LoadingSpinner} className="loading-spinner"/>,
         sender: 'Robot',
         id: crypto.randomUUID()
       }
@@ -100,7 +101,7 @@ function ChatUser({ message, sender }) {
       {sender === 'Robot' && (
         <img
           className="chat-message-profile"
-          src="Images/robot.png"
+          src={RobotProfileImage}
         />
       )}
       <div className="chat-message-text">
@@ -109,7 +110,7 @@ function ChatUser({ message, sender }) {
       {sender === 'User' && (
         <img
           className="chat-message-profile"
-          src="Images/user.png"
+          src={UserProfileImage}
         />
       )}
     </div>
