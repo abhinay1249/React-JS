@@ -1,5 +1,8 @@
 import { useState, useEffect, useRef } from 'react'
 import './App.css'
+import RobotProfileImage from './assets/robot.png';
+import UserProfileImage from './assets/user.png';
+import LoadingSpinner from './assets/loading-spinner.gif';
 
 
 
@@ -53,7 +56,7 @@ function ChatInput({ chatMessages, setChatMessages }) {
       setInputText('');
     }
   }
-  
+
   return (
     <div className="input-area-container">
       <input
