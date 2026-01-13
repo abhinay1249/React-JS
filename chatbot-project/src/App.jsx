@@ -1,16 +1,16 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { useState, useEffect, useRef } from 'react'
 import './App.css'
 
 
 
 function ChatInput({ chatMessages, setChatMessages }) {
-  const [inputText, setInputText] = React.useState('');
-  const [isLoading, setIsLoading] = React.useState(false);
+  const [inputText, setInputText] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
+
   function saveInputText(event) {
     setInputText(event.target.value);
   }
+
   async function sendMessage() {
     if (isLoading || inputText === '') {
       return;
@@ -24,6 +24,7 @@ function ChatInput({ chatMessages, setChatMessages }) {
         id: crypto.randomUUID()
       }
     ];
+
     setInputText('');
     setChatMessages([
       ...newChatMessages,
@@ -44,6 +45,7 @@ function ChatInput({ chatMessages, setChatMessages }) {
     ]);
     setIsLoading(false);
   }
+
   function handleKeyDown(event) {
     if (event.key === 'Enter') {
       sendMessage();
@@ -51,6 +53,7 @@ function ChatInput({ chatMessages, setChatMessages }) {
       setInputText('');
     }
   }
+  
   return (
     <div className="input-area-container">
       <input
@@ -112,8 +115,10 @@ function ChatUser({ message, sender }) {
 // ====================== Chat Messages Component =============================
 
 function useAutoScroll(dependencies){
-  const containerRef = React.useRef(null);
-  React.useEffect(() => {
+
+  const containerRef = useRef(null);
+
+  useEffect(() => {
     const containerElem = containerRef.current
     if (containerElem) {
       containerElem.scrollTop = containerElem.scrollHeight;
@@ -122,7 +127,9 @@ function useAutoScroll(dependencies){
   return containerRef;
 }
 function ChatMessages({ chatMessages}) {
+
   const chatMessagesRef = useAutoScroll([chatMessages]);
+
   return (
     <div
       className="chat-messages-container"
