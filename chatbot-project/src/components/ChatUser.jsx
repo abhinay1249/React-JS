@@ -1,5 +1,5 @@
-import RobotProfileImage from './assets/robot.png';
-import UserProfileImage from './assets/user.png';
+import RobotProfileImage from '../assets/robot.png';
+import UserProfileImage from '../assets/user.png';
 
 
 export function ChatUser({ message, sender }) {
