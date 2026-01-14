@@ -85,4 +85,6 @@ REACT SETUP AND NODEJS -------------> Install Node Js
     ** react/prop-types=off is used to turn off the props of in the code that stops eslint to check 
             for errors.
     <StrictMode> give us some additional checks and warnings when developing an app.
+    ** npm runs = tells the computer to look inside the package.json for a section called "scripts".
+    ** dev = look inside the "scripts" for "dev" and run the command on the right side of the "dev"(which is vite).
     
