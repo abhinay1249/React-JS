@@ -6,7 +6,10 @@ import './App.css'
 
 function App(){
 
-  const [chatMessages, setChatMessages] = useState([]);
+  const [chatMessages, setChatMessages] = useState(()=>{
+      const savedMessages = localStorage.getItem('messages');
+      return savedMessages? JSON.parse(savedMessages) : []
+    });
   // const [chatMessages,setChatMessages] = array;
   // const chatMessages = array[0];
   // const setChatMessages=array[1]
@@ -19,6 +22,12 @@ function App(){
       }
     });
   },[]);
+
+  useEffect(()=>{
+    localStorage.setItem('messages',
+      JSON.stringify(chatMessages)
+    );
+  },[chatMessages]);
 
   return (
     <div className="app-container">

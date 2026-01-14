@@ -25,3 +25,24 @@
   height:40px;
   margin:-15px
 }
+
+.send-button {
+  background-color: rgb(25, 135, 84);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  margin-left: 10px;
+  border-radius: 10px;
+  font-size: 15px;
+  cursor: pointer;
+}
+.clear-button {
+  background-color: rgb(222, 222, 222);
+  color: black;
+  border: none;
+  padding: 12px 20px;
+  margin-left: 10px;
+  border-radius: 10px;
+  font-size: 15px;
+  cursor: pointer;
+}
