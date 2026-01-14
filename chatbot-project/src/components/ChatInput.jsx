@@ -60,7 +60,7 @@ export function ChatInput({ chatMessages, setChatMessages }) {
   }
 
   function clearMessage(){
-    
+    setChatMessages([]);
   }
 
   return (
