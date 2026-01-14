@@ -1,5 +1,5 @@
 import RobotProfileImage from '../assets/robot.png';
-import UserProfileImage from '../assets/user.png';
+import Profile from '../assets/profile.png';
 import './ChatUser.css'
 
 export function ChatUser({ message, sender }) {
@@ -34,7 +34,7 @@ export function ChatUser({ message, sender }) {
       {sender === 'User' && (
         <img
           className="chat-message-profile"
-          src={UserProfileImage}
+          src={Profile}
         />
       )}
     </div>
