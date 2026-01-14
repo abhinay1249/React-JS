@@ -15,7 +15,7 @@ function useAutoScroll(dependencies){
   return containerRef;
 }
 
-function ChatMessages({ chatMessages}) {
+function ChatMessages({ chatMessages }) {
 
   const chatMessagesRef = useAutoScroll([chatMessages]);
 
@@ -29,6 +29,7 @@ function ChatMessages({ chatMessages}) {
           <ChatUser
             message={chatMessage.message}
             sender={chatMessage.sender}
+            time = {chatMessage.time}
             key={chatMessage.id}
           />
         );

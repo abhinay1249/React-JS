@@ -1,10 +1,8 @@
-import { useState} from 'react'
+import { useState, useEffect } from 'react'
 import { ChatInput } from './components/ChatInput';
 import ChatMessages from './components/ChatMessages';
-import './App.css' 
-import { useEffect } from 'react';
 import { Chatbot } from 'supersimpledev';
-
+import './App.css' 
 
 function App(){
 
@@ -21,8 +19,6 @@ function App(){
       }
     });
   },[]);
-
-
 
   return (
     <div className="app-container">
