@@ -2,6 +2,8 @@ import { useState} from 'react'
 import { ChatInput } from './components/ChatInput';
 import ChatMessages from './components/ChatMessages';
 import './App.css' 
+import { useEffect } from 'react';
+import { Chatbot } from 'supersimpledev';
 
 
 function App(){
@@ -10,6 +12,17 @@ function App(){
   // const [chatMessages,setChatMessages] = array;
   // const chatMessages = array[0];
   // const setChatMessages=array[1]
+
+  useEffect(()=>{
+    Chatbot.addResponses({
+      'goodbye':'GoodBye.Have a Great Day!',
+      'give me a unique id':function(){
+        return `Sure! Here is the unique id: ${crypto.randomUUID()}`;
+      }
+    });
+  },[]);
+
+
 
   return (
     <div className="app-container">
