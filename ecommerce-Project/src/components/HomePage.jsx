@@ -1,4 +1,7 @@
-function HomePage(){
+import './HomePage.css';
+import './header.css';
+
+export function HomePage(){
 
     return(
         <>
@@ -183,7 +186,7 @@ function HomePage(){
           </button>
         </div>
       </div>
-             </div>
+            </div>
         </>
     );
 }
