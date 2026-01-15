@@ -87,4 +87,11 @@ REACT SETUP AND NODEJS -------------> Install Node Js
     <StrictMode> give us some additional checks and warnings when developing an app.
     ** npm runs = tells the computer to look inside the package.json for a section called "scripts".
     ** dev = look inside the "scripts" for "dev" and run the command on the right side of the "dev"(which is vite).
-    
+
+ROUTING ---------------------> Let us create multiple pages in React
+
+    ** <Routes> tells react that all pages in the website.
+    ** <Route> is a page, i.e it adds a page to our website.
+    ** Route has a element and path attributes in it in which they are used to navigate the webpages,
+            eg:- <Route path="/checkout" element={<HomePage/>}
+
