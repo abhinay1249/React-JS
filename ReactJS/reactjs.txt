@@ -98,3 +98,9 @@ ROUTING ---------------------> Let us create multiple pages in React
             --> we only have 1 HTML File.
             --> we use React to multiple pages.
     ** In <Route> instead of using path="/" we can use index
+    ** Since we are using routing, no need to reload the page, 
+            Javascript is used to switch between pages using <Link> component.
+    ** <Link> is used to go to another webpage without reloading.
+    ** The link component uses a prop called to instead of href.
+    ** While using react-router usage of link is better than a, as it speed up the process a little bit.
+     
