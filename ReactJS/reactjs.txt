@@ -94,4 +94,7 @@ ROUTING ---------------------> Let us create multiple pages in React
     ** <Route> is a page, i.e it adds a page to our website.
     ** Route has a element and path attributes in it in which they are used to navigate the webpages,
             eg:- <Route path="/checkout" element={<HomePage/>}
-
+    ** SPA is known as Single Page Application which means,
+            --> we only have 1 HTML File.
+            --> we use React to multiple pages.
+    ** In <Route> instead of using path="/" we can use index
