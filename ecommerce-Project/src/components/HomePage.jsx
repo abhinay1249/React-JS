@@ -5,6 +5,7 @@ export function HomePage(){
 
     return(
         <>
+          <title>Ecommerce Project</title>
             <div class="header">
       <div class="left-section">
         <a href="index.html" class="header-link">
