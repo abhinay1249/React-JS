@@ -1,4 +1,4 @@
-.header {
+.header{
   background-color: rgb(8, 79, 45);
   color: white;
   padding-left: 15px;
@@ -110,6 +110,10 @@
   align-items: center;
   padding-left: 13px;
   padding-right: 13px;
+}
+
+.header .orders-link.active{
+  text-decoration: underline;
 }
 
 .header .orders-text {
