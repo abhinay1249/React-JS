@@ -15,7 +15,6 @@ function App() {
       <Route path="orders" element={<OrdersPage/>}/>
       <Route path="tracking" element={<TrackingPage/>}/>
     </Routes>
-
   )
 }
 
