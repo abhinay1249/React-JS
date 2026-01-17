@@ -110,4 +110,4 @@ REACT WITH BACKEND, DATA FETCHING --------------> In order to get the products f
     ** But when using it and generating the products from backend we need to include an unique identifier for it
             by using key{}.
     ** In order to show the decimal values upto a respective digits use .toFixed(<number>).
-    
+    ** Backend is something, which is used to store and manage the data.
