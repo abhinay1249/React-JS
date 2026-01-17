@@ -1,65 +1,71 @@
 import { Header } from '../components/Header';
 import CheckmarkIcon from '../assets/images/icons/checkmark.png';
+import HomeFavicon from '../assets/images/icons/home-favicon.png';
+import { products } from '../../starting-code/data/products.js';
 import './HomePage.css';
 
-export function HomePage() {
+export function HomePage(){
 
   return (
-
     <>
       <title>Ecommerce Project</title>
-      <link rel="icon" type="image/svg+xml" href="home-favicon.png" />
-      <Header/>
+      <link rel="icon" type="image/svg+xml" href={HomeFavicon}/>
+      <Header />
       <div class="home-page">
         <div class="products-grid">
-          <div class="product-container">
-            <div class="product-image-container">
-              <img class="product-image"
-                src="images/products/athletic-cotton-socks-6-pairs.jpg" />
-            </div>
 
-            <div class="product-name limit-text-to-2-lines">
-              Black and Gray Athletic Cotton Socks - 6 Pairs
-            </div>
+          {products.map((product) => {
+            return (
+              <div key={product.id} class="product-container">
+                <div class="product-image-container">
+                  <img class="product-image"
+                    src={product.image} />
+                </div>
 
-            <div class="product-rating-container">
-              <img class="product-rating-stars"
-                src="images/ratings/rating-45.png" />
-              <div class="product-rating-count link-primary">
-                87
+                <div class="product-name limit-text-to-2-lines">
+                  {product.name}
+                </div>
+
+                <div class="product-rating-container">
+                  <img class="product-rating-stars"
+                    src={`images/ratings/rating-${product.rating.stars * 10}.png`} />
+                  <div class="product-rating-count link-primary">
+                    {product.rating.count}
+                  </div>
+                </div>
+
+                <div class="product-price">
+                  ${(product.priceCents / 100).toFixed(2)}
+                </div>
+
+                <div class="product-quantity-container">
+                  <select>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                  </select>
+                </div>
+
+                <div class="product-spacer"></div>
+
+                <div class="added-to-cart">
+                  <img src={CheckmarkIcon} />
+                  Added
+                </div>
+
+                <button class="add-to-cart-button button-primary">
+                  Add to Cart
+                </button>
               </div>
-            </div>
-
-            <div class="product-price">
-              $10.90
-            </div>
-
-            <div class="product-quantity-container">
-              <select>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
-              </select>
-            </div>
-
-            <div class="product-spacer"></div>
-
-            <div class="added-to-cart">
-              <img src={CheckmarkIcon} />
-              Added
-            </div>
-
-            <button class="add-to-cart-button button-primary">
-              Add to Cart
-            </button>
-          </div>
+            );
+          })}
 
           <div class="product-container">
             <div class="product-image-container">
