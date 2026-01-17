@@ -124,4 +124,15 @@ REACT WITH BACKEND, DATA FETCHING --------------> In order to get the products f
         eg:- useEffect(()=>{
             <'[]' is the dependency array>
         },[]);
+    ** Server-Proxy Connection is used to set the port number for easy way of access rather than putting in url everytime.
+        server:{
+            proxy:{
+                '/api':{
+                    target:'http://localhost:3000'
+                }
+            }
+        } ----> it is used to identify if the url starts with /api then it recognises the port setup in vite.config.js.
+        ** <base href="/"> is used to add / infront of any relative urls.
+        
+
 
