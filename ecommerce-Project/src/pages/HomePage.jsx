@@ -3,6 +3,7 @@ import { Header } from '../components/Header';
 import { useEffect, useState } from 'react';
 import CheckmarkIcon from '../assets/images/icons/checkmark.png';
 import HomeFavicon from '../assets/images/icons/home-favicon.png';
+import { formatMoney } from '../utils/money';
 import './HomePage.css';
 
 export function HomePage({ cart }) {
@@ -16,11 +17,6 @@ export function HomePage({ cart }) {
         setProducts(response.data);
       });
   },[]); //[] is the dependency array used to run only once
-
-
-
-
-
 
 
   return (
@@ -54,7 +50,7 @@ export function HomePage({ cart }) {
                 </div>
 
                 <div className="product-price">
-                  ${(product.priceCents / 100).toFixed(2)}
+                  {formatMoney(product.priceCents)}
                 </div>
 
                 <div className="product-quantity-container">
