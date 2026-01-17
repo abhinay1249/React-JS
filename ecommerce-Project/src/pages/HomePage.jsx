@@ -1,21 +1,28 @@
 import axios from 'axios';
 import { Header } from '../components/Header';
+import { useEffect, useState } from 'react';
 import CheckmarkIcon from '../assets/images/icons/checkmark.png';
 import HomeFavicon from '../assets/images/icons/home-favicon.png';
-import { products } from '../../starting-code/data/products.js';
 import './HomePage.css';
 
-export function HomePage(){
+export function HomePage() {
 
-  axios.get("http://localhost:3000/api/products")
-  .then((response)=>{
-    console.log(response.data)
-  });
+  const[products, setProducts] = useState([]); 
+
+  useEffect(() => {
+    axios.get("http://localhost:3000/api/products")
+      .then((response) => {
+        setProducts(response.data);
+      });
+  },[]); //[] is the dependency array used to run only once
+
+
+
 
   return (
     <>
       <title>Ecommerce Project</title>
-      <link rel="icon" type="image/svg+xml" href={HomeFavicon}/>
+      <link rel="icon" type="image/svg+xml" href={HomeFavicon} />
       <Header />
       <div className="home-page">
         <div className="products-grid">

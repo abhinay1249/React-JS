@@ -120,4 +120,8 @@ REACT WITH BACKEND, DATA FETCHING --------------> In order to get the products f
         as a respone.
     ** asynchronous code cannot be saved in a variable.
     ** axios is a cleaner way to make requests from the backend.
+    ** In useEffect use can create a dependency array such that it runs only once after the component is created.
+        eg:- useEffect(()=>{
+            <'[]' is the dependency array>
+        },[]);
 
