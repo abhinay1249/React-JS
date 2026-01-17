@@ -119,4 +119,5 @@ REACT WITH BACKEND, DATA FETCHING --------------> In order to get the products f
     ** When a request is made to the backend, then for the method .json() need to be attached for the data to receive
         as a respone.
     ** asynchronous code cannot be saved in a variable.
-    
+    ** axios is a cleaner way to make requests from the backend.
+

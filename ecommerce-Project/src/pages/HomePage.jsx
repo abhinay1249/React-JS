@@ -1,3 +1,4 @@
+import axios from 'axios';
 import { Header } from '../components/Header';
 import CheckmarkIcon from '../assets/images/icons/checkmark.png';
 import HomeFavicon from '../assets/images/icons/home-favicon.png';
@@ -6,11 +7,10 @@ import './HomePage.css';
 
 export function HomePage(){
 
-  fetch("http://localhost:3000/api/products").then((response)=>{
-    response.json().then((data)=>{
-      console.log(data);
-    })
-  })
+  axios.get("http://localhost:3000/api/products")
+  .then((response)=>{
+    console.log(response.data)
+  });
 
   return (
     <>
