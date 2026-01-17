@@ -103,4 +103,10 @@ ROUTING ---------------------> Let us create multiple pages in React
     ** <Link> is used to go to another webpage without reloading.
     ** The link component uses a prop called to instead of href.
     ** While using react-router usage of link is better than a, as it speed up the process a little bit.
-     
+
+REACT WITH BACKEND, DATA FETCHING --------------> In order to get the products from backend.
+
+    ** In order to map a list of products from an array we can use .map() function.
+    ** But when using it and generating the products from backend we need to include an unique identifier for it
+            by using key{}.
+    ** 
