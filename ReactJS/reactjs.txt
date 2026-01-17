@@ -111,3 +111,12 @@ REACT WITH BACKEND, DATA FETCHING --------------> In order to get the products f
             by using key{}.
     ** In order to show the decimal values upto a respective digits use .toFixed(<number>).
     ** Backend is something, which is used to store and manage the data.
+    ** Data Fetching ---> gets data from the backend.
+    ** In order to get and fetch data use the function,
+        fetch()
+    ** fetch() returns a promise, where in a promise let us wait for asynchronous code to finish,
+        a promise has method called .then()
+    ** When a request is made to the backend, then for the method .json() need to be attached for the data to receive
+        as a respone.
+    ** asynchronous code cannot be saved in a variable.
+    
