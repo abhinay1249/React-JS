@@ -7,7 +7,8 @@ import './HomePage.css';
 
 export function HomePage() {
 
-  const[products, setProducts] = useState([]); 
+  const[products, setProducts] = useState([]);
+  const[cart, setCart] = useState([]);
 
   useEffect(() => {
     axios.get("http://localhost:3000/api/products")
@@ -17,13 +18,23 @@ export function HomePage() {
   },[]); //[] is the dependency array used to run only once
 
 
+  useEffect(() => {
+    axios.get("http://localhost:3000/api/cart-items")
+      .then((response) => {
+        setCart(response.data);
+      });
+  },[]);
+
+
 
 
   return (
     <>
       <title>Ecommerce Project</title>
       <link rel="icon" type="image/svg+xml" href={HomeFavicon} />
-      <Header />
+
+      <Header cart={cart}/>
+
       <div className="home-page">
         <div className="products-grid">
 
