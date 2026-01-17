@@ -5,10 +5,10 @@ import CheckmarkIcon from '../assets/images/icons/checkmark.png';
 import HomeFavicon from '../assets/images/icons/home-favicon.png';
 import './HomePage.css';
 
-export function HomePage() {
+export function HomePage({ cart }) {
 
   const[products, setProducts] = useState([]);
-  const[cart, setCart] = useState([]);
+  
 
   useEffect(() => {
     axios.get("/api/products")
@@ -18,12 +18,7 @@ export function HomePage() {
   },[]); //[] is the dependency array used to run only once
 
 
-  useEffect(() => {
-    axios.get("/api/cart-items")
-      .then((response) => {
-        setCart(response.data);
-      });
-  },[]);
+
 
 
 
