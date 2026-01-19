@@ -18,12 +18,12 @@ export function CheckoutPage({ cart }) {
       })
   },[]);
 
-  useEffect.apply(()=>{
+  useEffect(()=>{
     axios.get('/api/payment-summary')
       .then((response)=>{
         setPaymentSummary(response.data);
       })
-  })
+  },[]);
 
 
   return (
@@ -120,7 +120,7 @@ export function CheckoutPage({ cart }) {
             </div>
 
             <div className="payment-summary-row">
-              <div>Items (3):</div>
+              <div>Items ({paymentSummary.totalItems}):</div>
               <div className="payment-summary-money">$42.75</div>
             </div>
 
