@@ -113,8 +113,8 @@ export function CheckoutPage({ cart }) {
             }
 
           </div>
-
-          <div className="payment-summary">
+          {paymentSummary && (
+                      <div className="payment-summary">
             <div className="payment-summary-title">
               Payment Summary
             </div>
@@ -148,6 +148,8 @@ export function CheckoutPage({ cart }) {
               Place your order
             </button>
           </div>
+          )}
+
         </div>
       </div>
     </>
