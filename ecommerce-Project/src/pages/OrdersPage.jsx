@@ -1,13 +1,26 @@
+import axios from 'axios';
+import { useEffect, useState } from 'react';
 import { Header } from '../components/Header';
 import BuyAgainIcon from '../assets/images/icons/buy-again.png';
 import './OrdersPage.css';
 
-export function OrdersPage() {
+export function OrdersPage({ cart }) {
+
+  const [orders, setOrders] = useState([]);
+
+  useEffect(()=>{
+    axios.get('/api/orders')
+      .then((response)=>{
+        setOrders(response.data)
+      })
+  },[]);
+
+
   return (
     <>
       <title>Orders</title>
       <link rel="icon" type="image/svg+xml" href="orders-favicon.png" />
-      <Header />
+      <Header cart={cart}/>
       <div className="orders-page">
         <div className="page-title">Your Orders</div>
 
@@ -28,7 +41,7 @@ export function OrdersPage() {
 
               <div className="order-header-right-section">
                 <div className="order-header-label">Order ID:</div>
-                <div>27cba69d-4c3d-4098-b42d-ac7fa62b7664</div>
+                <div>{orders.id}</div>
               </div>
             </div>
 
