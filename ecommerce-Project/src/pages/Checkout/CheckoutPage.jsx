@@ -121,17 +121,17 @@ export function CheckoutPage({ cart }) {
 
             <div className="payment-summary-row">
               <div>Items ({paymentSummary.totalItems}):</div>
-              <div className="payment-summary-money">${formatMoney(paymentSummary.productCostCents)}</div>
+              <div className="payment-summary-money">{formatMoney(paymentSummary.productCostCents)}</div>
             </div>
 
             <div className="payment-summary-row">
               <div>Shipping &amp; handling:</div>
-              <div className="payment-summary-money">${formatMoney(paymentSummary.shippingCostCents)}</div>
+              <div className="payment-summary-money">{formatMoney(paymentSummary.shippingCostCents)}</div>
             </div>
 
             <div className="payment-summary-row subtotal-row">
               <div>Total before tax:</div>
-              <div className="payment-summary-money">$47.74</div>
+              <div className="payment-summary-money">{paymentSummary.totalCostBeforeTaxCents}</div>
             </div>
 
             <div className="payment-summary-row">
