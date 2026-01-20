@@ -68,7 +68,7 @@ export function OrdersPage({ cart }) {
                             Arriving on: {dayjs(orderProduct.product.estimatedDeliveryTimeMs).format('MMMM D')}
                           </div>
                           <div className="product-quantity">
-                            Quantity: {order.products.quantity}
+                            Quantity: {orderProduct.quantity}
                           </div>
                           <button className="buy-again-button button-primary">
                             <img className="buy-again-icon" src={BuyAgainIcon} />
