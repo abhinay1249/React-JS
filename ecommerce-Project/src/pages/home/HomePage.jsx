@@ -1,9 +1,9 @@
 import axios from 'axios';
-import { Header } from '../components/Header';
+import { Header } from '../../components/Header';
 import { useEffect, useState } from 'react';
 import CheckmarkIcon from '../assets/images/icons/checkmark.png';
 import HomeFavicon from '../assets/images/icons/home-favicon.png';
-import { formatMoney } from '../utils/money';
+import { formatMoney } from '../../utils/money';
 import './HomePage.css';
 
 export function HomePage({ cart }) {
