@@ -4,6 +4,7 @@ import { Header } from '../components/Header';
 import BuyAgainIcon from '../assets/images/icons/buy-again.png';
 import { formatMoney } from '../utils/money';
 import dayjs from 'dayjs';
+import OrderFavicon from '../assets/images/icons/orders-favicon.png'; 
 import './OrdersPage.css';
 
 
@@ -22,7 +23,7 @@ export function OrdersPage({ cart }) {
   return (
     <>
       <title>Orders</title>
-      <link rel="icon" type="image/svg+xml" href="orders-favicon.png" />
+      <link rel="icon" type="image/svg+xml" href={OrderFavicon} />
       <Header cart={cart} />
       <div className="orders-page">
         <div className="page-title">Your Orders</div>
@@ -56,7 +57,7 @@ export function OrdersPage({ cart }) {
                     return (
                       <Fragment key={orderProduct.product.id}>
                         <div className="product-image-container">
-                          <img src="images/products/athletic-cotton-socks-6-pairs.jpg" />
+                          <img src={orderProduct.product.image} />
                         </div>
 
                         <div className="product-details">
@@ -85,35 +86,6 @@ export function OrdersPage({ cart }) {
                       </Fragment>
                     )
                   })}
-
-
-                  <div className="product-image-container">
-                    <img src="images/products/adults-plain-cotton-tshirt-2-pack-teal.jpg" />
-                  </div>
-
-                  <div className="product-details">
-                    <div className="product-name">
-                      Adults Plain Cotton T-Shirt - 2 Pack
-                    </div>
-                    <div className="product-delivery-date">
-                      Arriving on: August 19
-                    </div>
-                    <div className="product-quantity">
-                      Quantity: 2
-                    </div>
-                    <button className="buy-again-button button-primary">
-                      <img className="buy-again-icon" src={BuyAgainIcon} />
-                      <span className="buy-again-message">Add to Cart</span>
-                    </button>
-                  </div>
-
-                  <div className="product-actions">
-                    <a href="/tracking">
-                      <button className="track-package-button button-secondary">
-                        Track package
-                      </button>
-                    </a>
-                  </div>
                 </div>
               </div>
             );
