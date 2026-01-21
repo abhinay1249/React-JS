@@ -49,5 +49,5 @@ export function OrderSummary({deliveryOptions, cart}) {
             }
 
         </div>
-    )
+    );
 }

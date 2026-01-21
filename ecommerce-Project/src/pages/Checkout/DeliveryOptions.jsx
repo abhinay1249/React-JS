@@ -34,5 +34,5 @@ export function DeliveryOptions({ deliveryOptions, cartItem }) {
             })}
 
         </div>
-    )
+    );
 }
