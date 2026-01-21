@@ -3,7 +3,7 @@ import { Routes, Route } from 'react-router';
 import { useEffect, useState } from 'react';
 import { HomePage } from './pages/Home/HomePage';
 import { CheckoutPage } from './pages/Checkout/CheckoutPage';
-import { OrdersPage } from './pages/OrdersPage';
+import { OrdersPage } from './pages/Orders/OrdersPage';
 import { TrackingPage } from './pages/TrackingPage';
 import { NotFoundPage } from './pages/NotFoundPage';
 import './App.css'
