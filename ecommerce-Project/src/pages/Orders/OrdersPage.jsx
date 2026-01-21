@@ -4,7 +4,7 @@ import { Header } from '../../components/Header';
 import BuyAgainIcon from '../../assets/images/icons/buy-again.png';
 import { formatMoney } from '../../utils/money';
 import dayjs from 'dayjs';
-import OrderFavicon from '../../assets/images/icons/orders-favicon.png'; 
+import OrderFavicon from '../../assets/images/icons/orders-favicon.png';
 import './OrdersPage.css';
 
 
@@ -13,10 +13,12 @@ export function OrdersPage({ cart }) {
   const [orders, setOrders] = useState([]);
 
   useEffect(() => {
-    axios.get('/api/orders?expand=products')
-      .then((response) => {
-        setOrders(response.data)
-      })
+    const ordersData = async () => {
+      const response = await axios.get('/api/orders?expand=products')
+      setOrders(response.data);
+      
+    }
+    ordersData();
   }, []);
 
 
