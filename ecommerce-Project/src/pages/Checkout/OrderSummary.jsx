@@ -1,7 +1,7 @@
 import dayjs from "dayjs";
 import { formatMoney } from "../../utils/money";
 
-export function OrderSummary([deliveryOptions, cart]) {
+export function OrderSummary({deliveryOptions, cart}) {
     return (
         <div className="order-summary">
 
@@ -15,7 +15,7 @@ export function OrderSummary([deliveryOptions, cart]) {
                         <div className="delivery-date">
                             Delivery date: {dayjs(selectedDeliveryOption.estimatedDeliveryTimeMs).format('dddd, MMMM D')}
                         </div>
-                        
+
                         <div className="cart-item-details-grid">
                             <img className="product-image"
                                 src={cartItem.product.image} />
@@ -29,7 +29,7 @@ export function OrderSummary([deliveryOptions, cart]) {
                                 </div>
                                 <div className="product-quantity">
                                     <span>
-                                        Quantity: <span className="quantity-label">2</span>
+                                        Quantity: <span className="quantity-label">{cartItem.quantity}</span>
                                     </span>
                                     <span className="update-quantity-link link-primary">
                                         Update
