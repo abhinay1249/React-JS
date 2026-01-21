@@ -133,6 +133,8 @@ REACT WITH BACKEND, DATA FETCHING --------------> In order to get the products f
             }
         } ----> it is used to identify if the url starts with /api then it recognises the port setup in vite.config.js.
         ** <base href="/"> is used to add / infront of any relative urls.
-
+    ** Async await is a feature of JavaScript that let us write the asynchronous code.
+    ** In react instead of promises, async - await is recommended.
+     
 
 
