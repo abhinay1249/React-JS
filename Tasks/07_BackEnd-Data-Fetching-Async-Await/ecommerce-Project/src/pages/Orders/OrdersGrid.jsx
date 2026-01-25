@@ -1,5 +1,4 @@
 import dayjs from "dayjs";
-import { formatMoney } from "../../utils/money";
 import BuyAgainIcon from '../../assets/images/icons/buy-again.png';
 import { Fragment } from "react";
 import { OrdersHeader } from "./OrdersHeader";
