@@ -135,6 +135,7 @@ REACT WITH BACKEND, DATA FETCHING --------------> In order to get the products f
     ** <base href="/"> is used to add / infront of any relative urls.
     ** Async await is a feature of JavaScript that let us write the asynchronous code.
     ** In react instead of promises, async - await is recommended.
-
+    ** In App.jsx, Incase the parameters need to be updated then it needs to be fixed through the
+        :orderId & :productId are called "URL Params".
 
 
