@@ -37,7 +37,7 @@ export function PaymentSummary({ paymentSummary }) {
                         Place your order
                     </button>
                 </>
-            )};
+            )}
         </div>
     );
 }
