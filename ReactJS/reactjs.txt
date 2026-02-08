@@ -35,7 +35,7 @@ Components ------------------------> A piece of a website
     ** In order to call a component in the react through render use 
         .render(<App/>)
     ** In react, while working with event handlers the event prop has to be in camelCase and should not 
-        run the event handler function rather just the event handler.
+        run the event handler function rather than just the event handler.
     ** In order to Get a random id on javascript use,
         ======>> crypto.randomUUID();
 
