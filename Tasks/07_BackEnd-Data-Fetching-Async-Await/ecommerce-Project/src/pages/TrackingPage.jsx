@@ -7,7 +7,7 @@ import dayjs from 'dayjs';
 
 export function TrackingPage({ cart }) {
   const {orderId , productId} = useParams();
-  const {order , setOrder} = useState(null);
+  const [order , setOrder] = useState(null);
 
   useEffect(()=>{
     const fetchTrackingData = async()=>{
