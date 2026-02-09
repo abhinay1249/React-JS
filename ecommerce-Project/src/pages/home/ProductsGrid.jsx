@@ -3,6 +3,8 @@ import { formatMoney } from '../../utils/money';
 import axios from 'axios';
 
 export function ProductsGrid({ products, loadCart }) {
+
+  
     return (
         <div className="products-grid">
 
