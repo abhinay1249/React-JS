@@ -142,3 +142,4 @@ DATA MUTATION -------------------------> Update data in the backend
 
     ** To get data from backend, use axios.get('/api/cart-items');
     ** To create data in backend, use axios.post('/api/cart-items');
+    ** By using post we can even send an object known as request body axios.post('<url>',<object>)
