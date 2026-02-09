@@ -1,10 +1,12 @@
+import { useState } from 'react';
 import CheckmarkIcon from '../../assets/images/icons/checkmark.png';
 import { formatMoney } from '../../utils/money';
 import axios from 'axios';
 
 export function ProductsGrid({ products, loadCart }) {
 
-  
+  const [quantity, setQuantity] = useState(1);
+
     return (
         <div className="products-grid">
 
@@ -33,7 +35,10 @@ export function ProductsGrid({ products, loadCart }) {
                         </div>
 
                         <div className="product-quantity-container">
-                            <select>
+                            <select value={quantity} onChange={(event)=>{
+                                const quantitySelected = Number(event.target.value);
+                                setQuantity(quantitySelected);
+                            }}>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
