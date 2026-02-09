@@ -138,4 +138,7 @@ REACT WITH BACKEND, DATA FETCHING --------------> In order to get the products f
     ** In App.jsx, Incase the parameters need to be updated then it needs to be fixed through the
         :orderId & :productId are called "URL Params".
 
+DATA MUTATION -------------------------> Update data in the backend
 
+    ** To get data from backend, use axios.get('/api/cart-items');
+    ** To create data in backend, use axios.post('/api/cart-items');
