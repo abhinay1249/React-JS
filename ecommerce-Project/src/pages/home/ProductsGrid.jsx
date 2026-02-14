@@ -5,12 +5,14 @@ import axios from 'axios';
 
 export function ProductsGrid({ products, loadCart }) {
 
-  const [quantity, setQuantity] = useState(1);
-
+  
     return (
         <div className="products-grid">
 
             {products.map((product) => {
+                
+                const [quantity, setQuantity] = useState(1);
+
                 return (
                     <div key={product.id} className="product-container">
                         <div className="product-image-container">
