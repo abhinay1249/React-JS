@@ -144,4 +144,8 @@ DATA MUTATION -------------------------> Update data in the backend
     ** To create data in backend, use axios.post('/api/cart-items');
     ** By using post we can even send an object known as request body axios.post('<url>',<object>)
     ** In React, Hooks can be defined on the higher level rather than in the low level such as in loops etc.
-    
+    ** Axios has different types:-
+        * get - axios.get('api/cart-items')
+        * post - axios.post('api/cart-items')
+        * put - axios.put('api/cart-items')
+        * delete - axios.delete('api/cart-items')
