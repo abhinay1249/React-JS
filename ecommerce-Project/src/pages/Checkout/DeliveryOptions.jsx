@@ -28,6 +28,7 @@ export function DeliveryOptions({ deliveryOptions, cartItem, loadCart }) {
                     <div key={deliveryOption.id} className="delivery-option" onClick={updateDeliveryOption}>
                         <input type="radio"
                             checked={deliveryOption.id === cartItem.deliveryOptionId}
+                            onChange={()=>{}}  // A placeholder where checked is used without onChange that does throw a warning.
                             className="delivery-option-input"
                             name={`delivery-option-${cartItem.productId}`} />
                         <div>
