@@ -1,4 +1,5 @@
 import { formatMoney } from "../../utils/money";
+import axios from 'axios';
 import dayjs from "dayjs";
 
 export function DeliveryOptions({ deliveryOptions, cartItem }) {
@@ -14,9 +15,16 @@ export function DeliveryOptions({ deliveryOptions, cartItem }) {
                 if (deliveryOption.priceCents > 0) {
                     priceString = `${formatMoney(deliveryOption.priceCents)} - Shipping`;
                 }
+                
+                const updateDeliveryOption = async () =>{
+                    await axios.put(`/api/cart-items/${cartItem.productId}`,{
+                        deliveryOptionId:deliveryOption.id
+                    });
+                }
+
 
                 return (
-                    <div key={deliveryOption.id} className="delivery-option">
+                    <div key={deliveryOption.id} className="delivery-option" onClick={}>
                         <input type="radio"
                             checked={deliveryOption.id === cartItem.deliveryOptionId}
                             className="delivery-option-input"
@@ -32,7 +40,6 @@ export function DeliveryOptions({ deliveryOptions, cartItem }) {
                     </div>
                 )
             })}
-
         </div>
     );
 }
