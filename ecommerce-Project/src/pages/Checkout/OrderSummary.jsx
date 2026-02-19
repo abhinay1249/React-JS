@@ -18,6 +18,7 @@ export function OrderSummary({deliveryOptions, cart, loadCart}) {
                 await axios.delete(`/api/cart-items/${cartItem.productId}`);
                 await loadCart();
             }
+
                 return (
                     <div key={cartItem.productId} className="cart-item-container">
                         <div className="delivery-date">
