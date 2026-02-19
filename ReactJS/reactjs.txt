@@ -150,3 +150,5 @@ DATA MUTATION -------------------------> Update data in the backend
         * put - axios.put('api/cart-items')    ----> update some data
         * delete - axios.delete('api/cart-items') ---> delete some data
     ** Each api call has a type and a url to perform actions on data.
+    ** If you want to redirect to the other page, react provides a hook that provides to go other page,
+        
