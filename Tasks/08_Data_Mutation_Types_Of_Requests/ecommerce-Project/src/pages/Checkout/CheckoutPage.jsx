@@ -31,12 +31,17 @@ export function CheckoutPage({ cart, loadCart }) {
 
   },[cart])
 
+  // Calculating the Total Products present in the cart
+
+  const totalItems = cart.reduce((sum, item) => {
+    return sum + item.quantity;
+  }, 0);
 
   return (
     <>
       <title>Checkout</title>
       <link rel="icon" type="image/svg+xml" href="cart-favicon.png" />
-      <CheckoutHeader />
+      <CheckoutHeader totalItems={totalItems}/>
 
       <div className="checkout-page">
         <div className="page-title">Review your order</div>
