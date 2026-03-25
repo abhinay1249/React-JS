@@ -1,4 +1,4 @@
-import { describe, expect, it } from 'vitest';
+import { describe, expect, it, vi } from 'vitest';
 import { render } from '@testing-library/react';
 import { Product } from './Product';
 
@@ -15,7 +15,10 @@ describe('Product Component', () => {
             priceCents: 1090,
             keywords: ["socks", "sports", "apparel"]
         }
-        expect(render(<Product product={product} />)).toBe();
+
+        const loadCart = vi.fn();
+
+        expect(render(<Product product={product} loadCart={loadCart} />)).toBe();
     })
 })
 
