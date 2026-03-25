@@ -1,5 +1,5 @@
 import { describe, expect, it, vi } from 'vitest';
-import { render } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import { Product } from './Product';
 
 describe('Product Component', () => {
@@ -18,7 +18,17 @@ describe('Product Component', () => {
 
         const loadCart = vi.fn();
 
-        expect(render(<Product product={product} loadCart={loadCart} />)).toBe();
+        render(<Product product={product} loadCart={loadCart}  />);
+
+    expect(
+        screen.getByText('Black and Gray Athletic Cotton Socks - 6 Pairs')
+    ).toBeInTheDocument();
+
+    expect(
+        screen.getByText('$10.90')
+    ).toBeInTheDocument();
+
+
     })
 })
 
