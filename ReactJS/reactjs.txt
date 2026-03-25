@@ -172,4 +172,7 @@ AUTOMATED TESTING ---------------------------> It is the process of testing the 
                 * import {it} from vitest; --> "it" is used ot create a test.
                 * Another library that we use is {expect} --> "expect" checks whether the result is correct.
                 * Another library that we use is {describe} --> which is used to group tests together, A group of tests are called as test suite.
-                
+        
+        2. Integration Testing:- Test multiple units of code working together.
+            * Testing a function we directly call it.
+            * Testing a component we try to render the component in order to display the component on the page.
