@@ -36,6 +36,9 @@ describe('Product Component', () => {
         screen.getByTestId("product-rating-stars")
     ).toHaveAttribute('src','images/ratings/rating-45.png');
 
+    expect(
+        screen.getByText('87')
+    ).toBeInTheDocument();
 
     });
 });
