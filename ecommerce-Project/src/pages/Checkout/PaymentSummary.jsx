@@ -48,7 +48,7 @@ export function PaymentSummary({ paymentSummary, loadCart }) {
                         Place your order
                     </button>
                 </>
-            )};
+            )}
         </div>
     );
 }
