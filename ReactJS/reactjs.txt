@@ -161,3 +161,9 @@ DATA MUTATION -------------------------> Update data in the backend
             That's why the code window.axios = axios; lets us use "axios"
             anywhere (including in the Conosle).
         
+AUTOMATED TESTING ---------------------------> It is the process of testing the app with code itself.
+
+    ** In order to test the app, we need to install a npm package known as Vitest
+            npm install --save-dev vitest
+            --save-dev is a flag which is used for saving only for the development part.
+    
