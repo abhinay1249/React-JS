@@ -168,4 +168,8 @@ AUTOMATED TESTING ---------------------------> It is the process of testing the 
             --save-dev is a flag which is used for saving only for the development part.
     ** There are two types of automated testing:-
         1. Unit Testing:- Which is used to test only one part of the code.
-        
+            * In order to test we need to import a library from vitest.
+                * import {it} from vitest; --> "it" is used ot create a test.
+                * Another library that we use is {expect} --> "expect" checks whether the result is correct.
+                * Another library that we use is {describe} --> which is used to group tests together, A group of tests are called as test suite.
+                
