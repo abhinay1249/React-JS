@@ -178,3 +178,4 @@ AUTOMATED TESTING ---------------------------> It is the process of testing the 
             * Testing a component we try to render the component in order to display the component on the page.
             * Mock :-  create a fake version of this function.
             * Screen :- check the fake web page.
+    ** Test User Interactions :- Interaction bases upon the user inputs.
