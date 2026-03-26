@@ -1,7 +1,11 @@
 import { describe, expect, it, vi } from 'vitest';
 import { render, screen } from '@testing-library/react';
 import { userEvent } from '@testing-library/user-event';
+import axios from 'axios';
 import { Product } from './Product';
+
+
+vi.mock('axios');
 
 describe('Product Component', () => {
     it('displays the product details correctly', () => {
@@ -66,8 +70,16 @@ describe('Product Component', () => {
         await user.click(addToCartButton);
 
 
-    })
+        expect(axios.post).toHaveBeenCalledWith(
+            '/api/cart-items',
+            {
+                productId:'e43638ce-6aa0-4b85-b27f-e1d07eb678c6',
+                quantity:1
+            }
+        );
 
+        expect(loadCart).toHaveBeenCalled();
+    });
 
 });
 
