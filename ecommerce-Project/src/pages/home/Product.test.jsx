@@ -1,5 +1,6 @@
 import { describe, expect, it, vi } from 'vitest';
 import { render, screen } from '@testing-library/react';
+import { userEvent } from '@testing-library/user-event';
 import { Product } from './Product';
 
 describe('Product Component', () => {
@@ -42,5 +43,10 @@ describe('Product Component', () => {
 
     });
     
+    it('add product to the cart',()=>{
+        const user = userEvent.setup()
+    })
+    
+
 });
 
