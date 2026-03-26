@@ -41,5 +41,6 @@ describe('Product Component', () => {
     ).toBeInTheDocument();
 
     });
+    
 });
 
