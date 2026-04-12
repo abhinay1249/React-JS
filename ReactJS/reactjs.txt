@@ -169,7 +169,7 @@ AUTOMATED TESTING ---------------------------> It is the process of testing the 
     ** There are two types of automated testing:-
         1. Unit Testing:- Which is used to test only one part of the code.
             * In order to test we need to import a library from vitest.
-                * import {it} from vitest; --> "it" is used ot create a test.
+                * import {it} from vitest; --> "it" is used to create a test.
                 * Another library that we use is {expect} --> "expect" checks whether the result is correct.
                 * Another library that we use is {describe} --> which is used to group tests together, A group of tests are called as test suite.
         
@@ -181,3 +181,7 @@ AUTOMATED TESTING ---------------------------> It is the process of testing the 
     ** Test User Interactions :- Interaction bases upon the user inputs.
         * In order to integrate it, we can easily import the required libraries of it.
         * Test hooks that are present are beforeEach,beforeAll, afterEach, afterAll
+    ** In React, there will be cases where the router issue would be encountered, where in the dev code will be in router and the
+        testing code shall be not in router, in such cases: 
+
+            * Memory Router is specifically for testing itself.
