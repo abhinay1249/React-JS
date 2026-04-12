@@ -185,3 +185,7 @@ AUTOMATED TESTING ---------------------------> It is the process of testing the 
         testing code shall be not in router, in such cases: 
 
             * Memory Router is specifically for testing itself.
+    ** In order to search for some text on the page while testing, use  
+        screen.getByText(); --> used to search the entire page.
+    ** In order to search for a specifically for single product container we can use within() function.
+        * within() = lets us find things within a specific element.
