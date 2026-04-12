@@ -50,6 +50,6 @@ describe('HomePage Component', () => {
             <MemoryRouter>
                 <HomePage cart={[]} loadCart={loadCart} />)
             </MemoryRouter>
-        )
-    })
-})
+        );
+    });
+});
