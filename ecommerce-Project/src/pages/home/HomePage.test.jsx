@@ -45,11 +45,14 @@ describe('HomePage Component', () => {
         })
     });
 
-    it('displays products correctly', () => {
+    it('displays products correctly', async () => {
         render(
             <MemoryRouter>
-                <HomePage cart={[]} loadCart={loadCart} />)
+                <HomePage cart={[]} loadCart={loadCart} />
             </MemoryRouter>
         );
+        const productContainers = await screen.findAllByTestId("product-container");
+        
+        expect(productContainers.length).toBe(2);
     });
 });
