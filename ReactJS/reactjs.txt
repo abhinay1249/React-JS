@@ -189,3 +189,5 @@ AUTOMATED TESTING ---------------------------> It is the process of testing the 
         screen.getByText(); --> used to search the entire page.
     ** In order to search for a specifically for single product container we can use within() function.
         * within() = let us find things within a specific element.
+
+
