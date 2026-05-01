@@ -13,6 +13,8 @@ describe('Product Component', () => {
 
     let loadCart;
 
+    let user;
+
         beforeEach(() => {
             product = {
                 id: "e43638ce-6aa0-4b85-b27f-e1d07eb678c6",
@@ -26,6 +28,7 @@ describe('Product Component', () => {
                 keywords: ["socks", "sports", "apparel"]
             }
             loadCart = vi.fn();
+            user = userEvent.setup();
         });
 
 
@@ -59,7 +62,6 @@ describe('Product Component', () => {
 
         render(<Product product={product} loadCart={loadCart} />);
 
-        const user = userEvent.setup()
         const addToCartButton = screen.getByTestId('add-to-cart-button');
         await user.click(addToCartButton);
 
@@ -82,7 +84,6 @@ describe('Product Component', () => {
 
         expect(quantitySelector).toHaveValue('1');
 
-        const user = userEvent.setup();
 
         await user.selectOptions(quantitySelector,'3');
         expect(quantitySelector).toHaveValue('3');
