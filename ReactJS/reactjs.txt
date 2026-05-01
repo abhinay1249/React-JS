@@ -195,5 +195,14 @@ DEPLOYING IN AWS -----> It is used to deploy the React App in AWS.
 
     ** AWS, it is known as Amazon Web Services. A collection of services that help us
         put content on the internet.
-    
+    ** It contains of multiple resources and services provided.
+    ** One of the most common resource is ec2, It stands for Elastic Compute Cloud.
+    ** EC2 - Rent a computer from AWS. It is infrastructure as a Service(IAAS).
+    ** Even though it is a computer still, we need to configue few of them on it.
+        * Install NodeJS
+        * Connect to the Internet
+        * Upload your code
+    ** In order to make this simpler we shall use a pre-built feature known as Elastic BeanStalk
+    ** Elastic BeanStalk - This resource is built upon ec2 and other services
+            * It does all the software setup for us in simpler way which is Platform as a Service (PAAS).
     
