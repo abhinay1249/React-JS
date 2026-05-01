@@ -178,12 +178,11 @@ AUTOMATED TESTING ---------------------------> It is the process of testing the 
             * Testing a component we try to render the component in order to display the component on the page.
             * Mock :-  create a fake version of this function.
             * Screen :- check the fake web page.
-    ** Test User Interactions :- Interaction bases upon the user inputs.
+    ** Test User Interactions :- Interaction based upon the user inputs.
         * In order to integrate it, we can easily import the required libraries of it.
         * Test hooks that are present are beforeEach,beforeAll, afterEach, afterAll
     ** In React, there will be cases where the router issue would be encountered, where in the dev code will be in router and the
         testing code shall be not in router, in such cases: 
-
             * Memory Router is specifically for testing itself.
     ** In order to search for some text on the page while testing, use  
         screen.getByText(); --> used to search the entire page.
