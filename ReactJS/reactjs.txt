@@ -206,5 +206,5 @@ DEPLOYING IN AWS -----> It is used to deploy the React App in AWS.
     ** Elastic BeanStalk - This resource is built upon ec2 and other services
         * It does all the software setup for us in simpler way which is Platform as a Service (PAAS).
     ** Role in AWS, gives us Elastic BeanStalk permission to use other services in AWS.
-    
+    ** Domain Name - short name that makes it easy to access the website
     
