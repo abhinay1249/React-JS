@@ -163,6 +163,8 @@ DATA MUTATION -------------------------> Update data in the backend
         
 AUTOMATED TESTING ---------------------------> It is the process of testing the app with code itself.
 
+
+
     ** In order to test the app, we need to install a npm package known as Vitest
             npm install --save-dev vitest@<version>
             --save-dev is a flag which is used for saving only for the development part.
@@ -188,3 +190,10 @@ AUTOMATED TESTING ---------------------------> It is the process of testing the 
         screen.getByText(); --> used to search the entire page.
     ** In order to search for a specifically for single product container we can use within() function.
         * within() = let us find things within a specific element.
+
+DEPLOYING IN AWS -----> It is used to deploy the React App in AWS.
+
+    ** AWS, it is known as Amazon Web Services. A collection of services that help us
+        put content on the internet.
+    
+    
