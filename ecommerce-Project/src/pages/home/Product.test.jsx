@@ -75,13 +75,17 @@ describe('Product Component', () => {
         expect(loadCart).toHaveBeenCalled();
     });
 
-    it('Selects a quantity', ()=>{
+    it('Selects a quantity', async ()=>{
         render(<Product product={product} loadCart={loadCart}/>);
 
         const quantitySelector = screen.getByTestId('product-quantity-selector');
 
         expect(quantitySelector).toHaveValue('1');
-    });
 
+        const user = userEvent.setup();
+
+        await user.selectOptions(quantitySelector,'3');
+        expect(quantitySelector).toHaveValue('3');
+    });
 });
 
