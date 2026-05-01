@@ -31,7 +31,9 @@ describe('Payment Summary Component',()=>{
             </MemoryRouter>
         );
 
-        expect(screen.getByText('Items (3): ')).toBeInTheDocument();
+        expect(
+            screen.getByText('Items (3):')
+        ).toBeInTheDocument();
     
     // There are multiple ways to check the text inside an element.
     // 1. within() + getByText() + toBeInTheDocument()
