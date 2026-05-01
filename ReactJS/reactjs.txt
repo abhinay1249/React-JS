@@ -209,3 +209,4 @@ DEPLOYING IN AWS -----> It is used to deploy the React App in AWS.
     ** Domain Name - short name that makes it easy to access the website
     ** Route53 - It is used to manage our domain names
         * Hosted Zone - will let us connect a domain name to our application.
+        * Certificate Manager - Used to manage ssl/tls certificates.
