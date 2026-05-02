@@ -211,3 +211,12 @@ DEPLOYING IN AWS -----> It is used to deploy the React App in AWS.
         * Hosted Zone - will let us connect a domain name to our application.
         * Certificate Manager - Used to manage ssl/tls certificates.
 
+TYPESCRIPT WITH REACT ----> Optimising the code
+
+    ** In order to setup type script,
+        * Enter npx create-vite@<version_number> and then hit enter.
+        * Then type y and hit enter.
+        * Give a project name and hit enter.
+        * Select framework as react and variant as typescript and hit enter.
+    ** .tsx refers to code usage done in typescript.
+    ** .jsx refers to code usage done in javascript.
