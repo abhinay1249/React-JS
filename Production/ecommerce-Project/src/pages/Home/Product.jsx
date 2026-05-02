@@ -1,7 +1,7 @@
 import {useState} from 'react';
 import { formatMoney } from '../../utils/money';
 import axios from 'axios';
-import CheckmarkIcon from '../../assets/images/icons/checkmark.png';    
+import CheckmarkIcon from '../../../public/images/icons/checkmark.png';    
 
 export function Product({product, loadCart}) {
 
@@ -33,7 +33,7 @@ export function Product({product, loadCart}) {
 
             <div className="product-rating-container">
                 <img className="product-rating-stars"
-                    src={`images/ratings/rating-${product.rating.stars * 10}.png`} />
+                    src={`/images/ratings/rating-${product.rating.stars * 10}.png`} />
                 <div className="product-rating-count link-primary">
                     {product.rating.count}
                 </div>

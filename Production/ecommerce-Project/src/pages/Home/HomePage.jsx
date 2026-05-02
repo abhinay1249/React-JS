@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { Header } from '../../components/Header';
 import { useEffect, useState } from 'react';
-import HomeFavicon from '../../assets/images/icons/home-favicon.png';
+import HomeFavicon from '../../../public/images/icons/home-favicon.png';
 import './HomePage.css';
 import { ProductsGrid } from './ProductsGrid';
 

@@ -229,3 +229,5 @@ TYPESCRIPT  ----> It is similar to javascript with extra features.
     ** In TypeScript, type checking is done and will throw an error, whereas with JS
         there will be no issue during the code and during that website may get crashed.
     ** A feature of typescript, known as TYPE INFERENCE --> TypeScript can figure out of the type automatically.
+    ** In typescript, ! refers to that this value will definitely exists(it will not be null).
+    
