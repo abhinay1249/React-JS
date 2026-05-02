@@ -230,4 +230,13 @@ TYPESCRIPT  ----> It is similar to javascript with extra features.
         there will be no issue during the code and during that website may get crashed.
     ** A feature of typescript, known as TYPE INFERENCE --> TypeScript can figure out of the type automatically.
     ** In typescript, ! refers to that this value will definitely exists(it will not be null).
-    
+    ** Type Alias = works like a variable, but for types:- 
+        eg:-
+            type HeaderProps = {
+                cart : {
+                    productId: string;
+                    quantity: number;
+                    deliveryOptionId: string;
+                }[];
+            }
+        

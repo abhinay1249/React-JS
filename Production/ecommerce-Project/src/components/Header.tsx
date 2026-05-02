@@ -4,7 +4,15 @@ import LogoWhite from '../../public/images/logo-white.png';
 import MobileLogoWhite from '../../public/images/mobile-logo-white.png';
 import './Header.css';
 
-export function Header({cart}) {
+type HeaderProps = {
+    cart : {
+        productId: string;
+        quantity: number;
+        deliveryOptionId: string;
+    }[];
+}
+
+export function Header({cart}: HeaderProps) {
 
     let totalQuantity = 0;
 
